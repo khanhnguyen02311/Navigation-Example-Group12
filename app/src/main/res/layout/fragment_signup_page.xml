@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".signupPage"
+    android:background="#2b2b2b">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký tài khoản"
+            android:gravity="center"
+            android:layout_marginTop="230dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="5dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/usernameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Tên đăng nhập"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="#CCCCCC"
+                android:textSize="17sp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <EditText
+                android:id="@+id/passwordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Mật khẩu"
+                android:backgroundTint="@color/white"
+                android:textColorHint="#CCCCCC"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/rePasswordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Nhập lại mật khẩu"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="#CCCCCC"
+                android:textSize="17sp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:width="200dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="35dp"
+            android:text="Đăng ký"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF7200"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

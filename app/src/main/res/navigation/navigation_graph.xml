@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/startPage">
+
+    <fragment
+        android:id="@+id/signupPage"
+        android:name="com.example.example_nav.signupPage"
+        android:label="fragment_signup_page"
+        tools:layout="@layout/fragment_signup_page" >
+        <action
+            android:id="@+id/action_signupPage_to_welcomePage2"
+            app:destination="@id/welcomePage"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomePage"
+        android:name="com.example.example_nav.welcomePage"
+        android:label="fragment_welcome_page"
+        tools:layout="@layout/fragment_welcome_page" />
+    <fragment
+        android:id="@+id/startPage"
+        android:name="com.example.example_nav.startPage"
+        android:label="fragment_start_page"
+        tools:layout="@layout/fragment_start_page" >
+        <action
+            android:id="@+id/action_startPage_to_signupPage"
+            app:destination="@id/signupPage" />
+        <action
+            android:id="@+id/action_startPage_to_signinPage"
+            app:destination="@id/signinPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinPage"
+        android:name="com.example.example_nav.signinPage"
+        android:label="fragment_signin_page"
+        tools:layout="@layout/fragment_signin_page" >
+        <action
+            android:id="@+id/action_signinPage_to_welcomePage"
+            app:destination="@id/welcomePage" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_startPage"
+        app:destination="@id/startPage"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+</navigation>
